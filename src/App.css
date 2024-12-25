@@ -2,10 +2,10 @@
   border: 1px solid #daecec;
   border-radius: 8px; /* for rounded corner */
 
-  background-color: rgb(16, 131, 92);
+  background-color: rgb(15, 184, 141);
 }
 h2 {
-  color: bisque;
+  color: rgb(235, 221, 205);
 }
 img {
   box-shadow: 0 4px 30px rgba(235, 233, 233, 0.3),
