@@ -15,7 +15,7 @@ const ExpandCard = ({ data }) => {
 
   return (
     <>
-      <div className=" mt-16 md:mt-0  bg-teal-900 flex flex-col  items-center md:relative  text-gray-500 rounded-lg">
+      <div className=" mt-16 md:mt-0  bg-teal-950 flex flex-col  items-center md:relative  text-gray-500 rounded-lg">
         <div className="card flex flex-col  md:flex-row p-5 flex-shrink-0">
           <div className=" text-center mt-2 mb-5 md:mr-4 md:mb-0">
             <img

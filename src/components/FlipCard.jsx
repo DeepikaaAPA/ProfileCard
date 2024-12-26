@@ -17,7 +17,7 @@ const FlipCard = ({ data }) => {
       onMouseLeave={handleFlip}
     >
       <div className={`flip-card ${isFlipped ? "flipped " : ""}`}>
-        <div className="flip-card-front flex-col m-auto bg-teal-900 text-white p-5 rounded-lg shadow-lg">
+        <div className="flip-card-front flex-col m-auto bg-teal-950 text-white p-5 rounded-lg shadow-lg">
           <FlipCardFront data={data}></FlipCardFront>
         </div>
         <div className="flip-card-back flex flex-col bg-green-200 text-gray-500  p-1 rounded-lg shadow-lg">
