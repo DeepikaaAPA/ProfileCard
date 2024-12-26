@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // define the base url
-const baseURL = "https://randomuser.me/api/?page=1&results=1&seed=abc";
+const baseURL = "https://randomuser.me/api/?page=1&results=1&seed=los";
 
 // define the axios instance
 const instance = axios.create({
