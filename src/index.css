@@ -9,8 +9,8 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   display: flex;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+ overflow-y: visible;
   background: linear-gradient(to bottom right, #f5f3f3, #929191);
  }
 
