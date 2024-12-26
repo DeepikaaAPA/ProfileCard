@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import HoverCard from "./components/HoverCard";
 import FlipCard from "./components/FlipCard";
+import ExpandCard from "./components/ExpandCard";
 
 function App() {
   const [data, setData] = useState(null);
@@ -83,6 +84,7 @@ function App() {
       </ul>
       {style == "hover" && <HoverCard data={data}></HoverCard>}
       {style == "flip" && <FlipCard data={data}></FlipCard>}
+      {style == "expand" && <ExpandCard data={data}></ExpandCard>}
     </>
   );
 }

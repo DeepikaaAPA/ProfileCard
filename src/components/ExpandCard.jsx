@@ -3,22 +3,20 @@ import {
   faPhone,
   faPerson,
   faPersonDress,
+  faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import About from "./About";
+import ExpandAbout from "./ExpandAbout";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons/faCaretUp";
 
-const HoverCard = ({ data }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const ExpandCard = ({ data }) => {
+  const [showAbout, setShowAbout] = useState(false);
 
   return (
     <>
-      <div
-        className=" mt-16 md:mt-0 flex flex-col md:flex-row gap-5 items-center md:relative  text-gray-500 p-4 rounded-lg"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onClick={() => setIsHovered(!isHovered)}
-      >
-        <div className="animated-border card min-w-72  bg-teal-900 flex flex-col lg:flex-row  p-5 flex-shrink-0">
+      <div className=" mt-16 md:mt-0  bg-teal-900 flex flex-col  items-center md:relative  text-gray-500 p-4 rounded-lg">
+        <div className="card min-w-72 flex flex-col  md:flex-row p-5 flex-shrink-0">
           <div className=" text-center mt-2 mb-5 md:mr-4 md:mb-0">
             <img
               className=" rounded-full border-3 border-gray-100 m-auto lg:m-2 hover:scale-125"
@@ -26,7 +24,7 @@ const HoverCard = ({ data }) => {
             ></img>
           </div>
           <div className=" ps-5">
-            <h2 className="text-4xl text-center border-b pb-3 lg:text-4xl font-extrabold bg-gradient-to-r from-yellow-300 via-green-200 to-green-300 text-transparent bg-clip-text">
+            <h2 className="text-2xl md:text-4xl text-center border-b pb-3 lg:text-4xl font-extrabold bg-gradient-to-r from-yellow-300 via-green-200 to-green-300 text-transparent bg-clip-text">
               {data.name.first} {data.name.last}
             </h2>
             {/* conditional styling of text color of gender */}
@@ -49,9 +47,25 @@ const HoverCard = ({ data }) => {
             </p>
           </div>
         </div>
-        {isHovered && <About data={data}></About>}
+        <div className=" text-center w-full text-white text-lg">
+          <button
+            className="p-0 w-32 rounded-full  bg-teal-900 text-md"
+            onClick={() => {
+              setTimeout(() => {
+                setShowAbout(!showAbout);
+              }, 200);
+            }}
+          >
+            <FontAwesomeIcon icon={showAbout ? faCaretUp : faCaretDown}>
+              {" "}
+            </FontAwesomeIcon>
+            {showAbout ? " Show less" : " Show more"}
+          </button>
+
+          {showAbout && <ExpandAbout data={data}></ExpandAbout>}
+        </div>
       </div>
     </>
   );
 };
-export default HoverCard;
+export default ExpandCard;

@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-#root{
-  margin:auto;
+#root {
+  margin: auto;
 }
 body {
   margin: 0;
@@ -10,19 +10,29 @@ body {
     "Lucida Sans", Arial, sans-serif;
   display: flex;
   min-height: 100vh;
- overflow-y: visible;
+  overflow-y: visible;
   background: linear-gradient(to bottom right, #f5f3f3, #929191);
- }
+}
 
- button{
+button {
   border-radius: 5px;
-  color:white;
+  color: white;
   background-color: rgb(13, 161, 161);
-  padding:10px;
-  width:100px;
+  padding: 10px;
+  width: 100px;
   font-size: large;
   font-weight: bold;
- }
+}
+@keyframes border-animation {
+  from {
+    box-shadow: 0 0 60px 5px rgba(92, 238, 70, 0.8);
+  }
+  to {
+    box-shadow: 0 0 60px 5px rgba(255, 255, 255, 1);
+  }
+}
 
+.animated-border {
+  animation: border-animation 2s infinite; /* 2 seconds animation duration */
 
- 
+}
