@@ -11,7 +11,7 @@ body {
   display: flex;
   min-height: 100vh;
   overflow-y: visible;
-  background: linear-gradient(to bottom right, #f5f3f3, #929191);
+  background: black;
 }
 
 button {
@@ -25,14 +25,14 @@ button {
 }
 @keyframes border-animation {
   from {
-    box-shadow: 0 0 60px 5px rgba(92, 238, 70, 0.8);
+    box-shadow: 0 0 20px 5px rgba(244, 245, 244, 0.8);
   }
+
   to {
-    box-shadow: 0 0 60px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 20px 5px rgb(164, 235, 137);
   }
 }
 
 .animated-border {
   animation: border-animation 2s infinite; /* 2 seconds animation duration */
-
 }

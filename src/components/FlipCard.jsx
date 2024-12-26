@@ -12,7 +12,7 @@ const FlipCard = ({ data }) => {
 
   return (
     <div
-      className="flip-card-container  w-72 md:w-96 "
+      className="flip-card-container  md:w-96 "
       onMouseEnter={handleFlip}
       onMouseLeave={handleFlip}
     >

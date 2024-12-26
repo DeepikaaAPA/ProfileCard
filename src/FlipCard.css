@@ -1,6 +1,9 @@
 .flip-card-container {
   perspective: 2000px;
   height: 370px;
+  margin: 70px 10px 10px 10px;
+  width:300px;
+ 
 }
 
 .flip-card {

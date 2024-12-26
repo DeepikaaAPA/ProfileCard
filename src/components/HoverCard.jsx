@@ -18,10 +18,10 @@ const HoverCard = ({ data }) => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={() => setIsHovered(!isHovered)}
       >
-        <div className="animated-border card min-w-72  bg-teal-900 flex flex-col lg:flex-row  p-5 flex-shrink-0">
+        <div className="animated-border card min-w-72  bg-teal-800 flex flex-col lg:flex-row  p-5 flex-shrink-0">
           <div className=" text-center mt-2 mb-5 md:mr-4 md:mb-0">
             <img
-              className=" rounded-full border-3 border-gray-100 m-auto lg:m-2 hover:scale-125"
+              className=" rounded-full  m-auto lg:m-2 hover:scale-125"
               src={data.picture.large}
             ></img>
           </div>

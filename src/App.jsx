@@ -42,13 +42,13 @@ function App() {
 
   return (
     <>
-      <ul className="absolute inset-1 h-16 flex rounded-3xl justify-evenly   *:m-2">
+      <ul className="absolute inset-0 h-16 flex flex-wrap rounded-3xl justify-center   ">
         <li>
           <button
             className={
-              style == "flip"
+              (style == "flip"
                 ? "bg-teal-400  border-white border-2"
-                : "hover:bg-teal-400"
+                : "hover:bg-teal-400") + " md:ms-5"
             }
             onClick={() => setStyle("flip")}
           >
@@ -59,9 +59,9 @@ function App() {
           {" "}
           <button
             className={
-              style == "hover"
+              (style == "hover"
                 ? "bg-teal-400  border-white border-2"
-                : "hover:bg-teal-400"
+                : "hover:bg-teal-400") + " md:mx-5 "
             }
             onClick={() => setStyle("hover")}
           >
@@ -72,9 +72,9 @@ function App() {
           {" "}
           <button
             className={
-              style == "expand"
+              (style == "expand"
                 ? "bg-teal-400  border-white border-2"
-                : "hover:bg-teal-400"
+                : "hover:bg-teal-400") + " md:me-5 "
             }
             onClick={() => setStyle("expand")}
           >
@@ -82,9 +82,14 @@ function App() {
           </button>
         </li>
       </ul>
+
       {style == "hover" && <HoverCard data={data}></HoverCard>}
       {style == "flip" && <FlipCard data={data}></FlipCard>}
       {style == "expand" && <ExpandCard data={data}></ExpandCard>}
+      <p className="text-red-400 text-lg animate-pulse text-center border-2 border-white">
+        {" "}
+        Move mouse over the card to view details
+      </p>
     </>
   );
 }
