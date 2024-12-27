@@ -47,7 +47,7 @@ function App() {
           <button
             className={
               (style == "flip"
-                ? "bg-teal-400  border-white border-2"
+                ? "bg-teal-400  border-white border-2 scale-125 "
                 : "hover:bg-teal-400") + " md:ms-5"
             }
             onClick={() => setStyle("flip")}
@@ -60,7 +60,7 @@ function App() {
           <button
             className={
               (style == "hover"
-                ? "bg-teal-400  border-white border-2"
+                ? "bg-teal-400  border-white border-2 scale-125"
                 : "hover:bg-teal-400") + " md:mx-5 "
             }
             onClick={() => setStyle("hover")}
@@ -73,7 +73,7 @@ function App() {
           <button
             className={
               (style == "expand"
-                ? "bg-teal-400  border-white border-2"
+                ? "bg-teal-400  border-white border-2 scale-125"
                 : "hover:bg-teal-400") + " md:me-5 "
             }
             onClick={() => setStyle("expand")}
